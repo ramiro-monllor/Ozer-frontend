@@ -12,10 +12,10 @@ export default {
       },
       colors: {
         brand: {
-          darkGray: "#1b1c20",
-          lightGrey: "#1a1c1f",
-          brown: "#651417",
-          red: "#A52029"
+          cream: '#FFFCF2',
+          lightGray: '#e9ecef',
+          darkBlue: '#023e8a',
+          lightBlue: '#3a6ea5'
         }
       }
     },

@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ozet App",
-  description: "Ozet App",
+  title: "Ozer App",
+  description: "Ozer App",
 };
 
 export default function RootLayout({
