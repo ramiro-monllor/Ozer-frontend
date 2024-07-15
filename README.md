@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Clients and Bills - Ozer Plataform
 
-## Getting Started
+<p align="center">
+<img src="https://static.wixstatic.com/media/772c04_fb9b329a7e3d421e968f5c3fc4fbc6c2~mv2.png/v1/fill/w_186,h_186,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DALL%C2%B7E%202024-05-14%2014_13_22%20-%20Design%20a%20modern%20and%20simple%20logo%20for%20an%20app%20named%20ozer_bot_%20The%20app%20is%20a.png" width="300" alt="Clients and Bills"/>
+</p>
 
-First, run the development server:
+## Introducción
+
+Clients and Bills es una plataforma desarrollada utilizando tecnologías modernas como React, Next.js, Tailwind CSS y TypeScript. La plataforma permite a los usuarios ver las facturas de los clientes e interactuar con ellas.
+
+## Tecnologías Utilizadas
+
+- React
+- Next.js
+- Tailwind CSS
+- TypeScript
+- React Hot Toast para notificaciones
+
+## Instalación y Ejecución
+
+Para comenzar a utilizar Clients and Bills en tu entorno local, sigue los siguientes pasos:
+
+1. Clona el repositorio desde [https://github.com/ramiro-monllor/Ozer-frontend].
+2. Abre una terminal y navega hasta la ubicación del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Después de la instalación, inicia el servidor de desarrollo con:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+$ npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Abre tu navegador y visita http://localhost:3000 para acceder a la plataforma.
 
-## Learn More
+También verificar y asignar http://localhost:3001 a la variable baseUrl ubicada en '.src/libs/endpoints.ts' si deseamos correr la API en el local.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funcionalidades Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Ver las facturas de los clientes.
+- Publicar y editar nuevas facturas utilizando formularios.
+- Eliminar facturas.
+- Ver el monto total de las facturas.
 
-## Deploy on Vercel
+## Repositorio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://github.com/ramiro-monllor/Ozer-frontend

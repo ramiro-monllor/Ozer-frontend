@@ -1,17 +1,27 @@
 'use client'
 
 // Package Imports
-import React, { useState } from 'react'
+import React from 'react'
+
+// Component Imports
+import Client from './Client'
+import TableBill from './TableBill'
+
+// UI imports
+import { Spinner } from "@nextui-org/spinner";
+
+// Custom Hook Imports
+import useClient from '@/hooks/useClient'
 
 const Hero = () => {
-    const [client, setClient] = useState("")
+    const { client, setClient, handleSubmit, clientData, loading, error } = useClient()
 
     return (
         <div>
             <p className='text-black text-4xl lg:text-5xl font-poppins font-bold text-center p-5 mt-6 mb-4'>
                 Mira las <span className='text-brand-darkBlue'>facturas</span> de tus clientes!
             </p>
-            <form className="max-w-md mx-auto">
+            <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
                 <div className="relative">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -34,6 +44,24 @@ const Hero = () => {
                     </button>
                 </div>
             </form>
+            {loading ?
+                <div className="mx-auto flex justify-center gap-10 px-5 max-w-5xl md:max-w-4xl mt-2">
+                    <Spinner />
+                </div>
+                : null}
+            {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+            {
+                !loading && clientData &&
+                <>
+                    <Client
+                        client={clientData}
+                    />
+                    <TableBill
+                        bills={clientData.bill!}
+                        client={clientData}
+                    />
+                </>
+            }
         </div >
     )
 }
